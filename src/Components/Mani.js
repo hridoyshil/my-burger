@@ -14,6 +14,7 @@ const Main = props => {
             <div className="container">
                 <BurgerBuilder />
                 < Orders />
+                < Checkout />
                 {/* <Route path="/orders" component={Orders} />
                 <Route path="/checkout" component={Checkout} />
                 <Route path="/" exact component={BurgerBuilder} /> */}
