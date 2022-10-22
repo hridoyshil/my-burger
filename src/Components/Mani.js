@@ -1,14 +1,16 @@
-import React from "react";
-import Header from "./Header/Header";
-import BurgerBuilder from "./BurgerBuilder/BurgerBuilder";
+import React from 'react';
+import Header from './Header/Header';
+import BurgerBuilder from './BurgerBuilder/BurgerBuilder';
 
-const Mani = props => {
+const Main = props => {
     return (
         <div>
-            < Header />
-            <BurgerBuilder />
+            <Header />
+            <div className="container">
+                <BurgerBuilder />
+            </div>
         </div>
     )
 }
 
-export default Mani;
+export default Main;
