@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchOrders } from '../../redux/actionCreators';
+import Order from './Order/Order';
+import Spinner from '../Spinner/Spinner';
+
+
+
+
 
 const mapStateToProps = state => {
     return {
@@ -20,19 +26,24 @@ const mapDispatchToProps = dispatch => {
 
 
 class Orders extends Component {
-    componentDidMount() {
-        this.props.fetchOrders();
-    }
+    // componentDidMount() {
+    //     this.props.fetchOrders();
+    // }
     componentDidUpdate() {
         console.log(this.props);
     }
     render() {
+        // let orders = this.props.orders.map(order => {
+        //     return <Order order={order} key={order.id} />
+        // })
         return (
             <div>
-                <p>Orders</p>
+                <p>orders</p>
             </div>
         )
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Orders);
+
+export default Orders;
+// export default connect(mapStateToProps, mapDispatchToProps)(Orders);
