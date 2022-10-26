@@ -5,8 +5,16 @@ import Orders from './Orders/Orders';
 import Checkout from './Orders/Checkout/Checkout';
 import Spinner from './Spinner/Spinner';
 import Auth from './Auth/Auth';
+import { connect } from 'react-redux';
 
-import { Route } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
+
+
+const mapStateToProps = state => {
+    return {
+        token: state.token,
+    }
+}
 
 
 const Main = props => {
@@ -28,3 +36,4 @@ const Main = props => {
 }
 
 export default Main;
+// export default connect(mapStateToProps)(Main);
