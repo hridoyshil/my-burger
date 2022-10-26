@@ -4,6 +4,7 @@ import BurgerBuilder from './BurgerBuilder/BurgerBuilder';
 import Orders from './Orders/Orders';
 import Checkout from './Orders/Checkout/Checkout';
 import Spinner from './Spinner/Spinner';
+import Auth from './Auth/Auth';
 
 import { Route } from 'react-router-dom';
 
@@ -17,6 +18,7 @@ const Main = props => {
                 < Orders />
                 < Checkout />
                 {/* <Spinner /> */}
+                <Auth />
                 {/* <Route path="/orders" component={Orders} />
                 <Route path="/checkout" component={Checkout} />
                 <Route path="/" exact component={BurgerBuilder} /> */}
