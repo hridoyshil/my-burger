@@ -1,7 +1,6 @@
 import axios from 'axios';
 import * as actionTypes from './actionTypes';
 
-
 export const addIngredient = igtype => {
     return {
         type: actionTypes.ADD_INGREDIENT,
@@ -28,6 +27,7 @@ export const resetIngredients = () => {
     }
 }
 
+
 export const loadOrders = orders => {
     return {
         type: actionTypes.LOAD_ORDERS,
@@ -41,8 +41,9 @@ export const orderLoadFailed = () => {
     }
 }
 
-export const fetchOrders = () => dispatch => {
-    axios.get("https://my-burger-8e7de-default-rtdb.firebaseio.com/orders.json")
+export const fetchOrders = (token, userId) => dispatch => {
+    const queryParams = '&orderBy="userId"&equalTo="' + userId + '"';
+    axios.get('https://burger-builder-4f837.firebaseio.com/orders.json?auth=' + token + queryParams)
         .then(response => {
             dispatch(loadOrders(response.data));
         })

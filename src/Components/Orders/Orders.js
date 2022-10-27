@@ -13,6 +13,8 @@ const mapStateToProps = state => {
         orders: state.orders,
         orderLoading: state.orderLoading,
         orderErr: state.orderErr,
+        token: state.token,
+        userId: state.userId,
     }
 }
 
