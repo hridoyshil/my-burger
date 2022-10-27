@@ -8,6 +8,7 @@ import Auth from './Auth/Auth';
 import { connect } from 'react-redux';
 
 import { Route, Switch, Redirect } from 'react-router-dom';
+import { authCheck } from '../redux/authActionCreators';
 
 
 const mapStateToProps = state => {
