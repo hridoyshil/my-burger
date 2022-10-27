@@ -6,6 +6,7 @@ import Checkout from './Orders/Checkout/Checkout';
 import Spinner from './Spinner/Spinner';
 import Auth from './Auth/Auth';
 import { connect } from 'react-redux';
+// import Logout from './Auth/Logout';
 
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { authCheck } from '../redux/authActionCreators';
